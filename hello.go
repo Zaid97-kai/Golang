@@ -1,15 +1,39 @@
+// package main
+
+// import "fmt"
+
+// func add(x int, y int) int {
+// 	return x + y
+// }
+
+// func main() {
+
+// 	var f func(int, int) int = add
+// 	fmt.Println(f(3, 4))
+
+// 	var x = f(4, 5) // 9
+// 	fmt.Println(x)
+// }
+
 package main
 
 import "fmt"
 
-func main() {
-	var age, name = add(4, 5, "Tom", "Simpson")
-	fmt.Println(age)  // 9
-	fmt.Println(name) // Tom Simpson
-}
+func add(x int, y int) int {
 
-func add(x, y int, firstName, lastName string) (int, string) {
-	var z int = x + y
-	var fullName = firstName + " " + lastName
-	return z, fullName
+	return x + y
+}
+func multiply(x int, y int) int {
+
+	return x * y
+}
+func action(n1 int, n2 int, operation func(int, int) int) {
+
+	result := operation(n1, n2)
+	fmt.Println(result)
+}
+func main() {
+
+	action(10, 25, add)    // 35
+	action(5, 6, multiply) // 30
 }
