@@ -15,4 +15,14 @@ func main() {
 
 	fmt.Println(numbers)
 	fmt.Println(numbers[2])
+
+	for i := 1; i < 10; i++ {
+		fmt.Println(i * i)
+	}
+
+    var users = [3]string{"Tom", "Alice", "Kate"}
+    for index, value := range users
+    {
+        fmt.Println(index, value)
+    }
 }
