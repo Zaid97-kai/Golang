@@ -1,6 +1,9 @@
 package main
+
 import "fmt"
- 
+
 func main() {
-    fmt.Println("Hello Go!")
+	var msg string
+	msg = "Hello Go!"
+	fmt.Println(msg)
 }
